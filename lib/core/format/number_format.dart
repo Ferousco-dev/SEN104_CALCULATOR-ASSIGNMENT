@@ -44,7 +44,7 @@ abstract final class NumberFormatter {
       final sign = s.startsWith('-') ? '-' : '';
       final exp = digits.length - 1;
       final mantissa = '${digits[0]}.${digits.substring(1, 7).replaceAll(RegExp(r'0+$'), '')}';
-      return '${sign}${mantissa}e$exp';
+      return '$sign${mantissa}e$exp';
     }
     return s;
   }
