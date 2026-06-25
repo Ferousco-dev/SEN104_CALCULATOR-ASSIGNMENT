@@ -4,7 +4,6 @@ import 'core/lifecycle/lifecycle_observer.dart';
 import 'features/basic/basic_controller.dart';
 import 'features/basic/basic_screen.dart';
 import 'features/combinatorics/combinatorics_controller.dart';
-import 'features/combinatorics/combinatorics_screen.dart';
 import 'features/matrix/matrix_controller.dart';
 import 'features/matrix/matrix_screen.dart';
 import 'features/scientific/scientific_controller.dart';
@@ -63,9 +62,11 @@ class _MyCalcAppState extends State<MyCalcApp> {
   Widget _bodyForMode(CalcMode mode) {
     return switch (mode) {
       CalcMode.basic => BasicScreen(controller: _basicCtrl),
-      CalcMode.scientific => ScientificScreen(controller: _sciCtrl),
+      CalcMode.scientific => ScientificScreen(
+          controller: _sciCtrl,
+          comboController: _comboCtrl,
+        ),
       CalcMode.matrix => MatrixScreen(controller: _matrixCtrl),
-      CalcMode.combinatorics => CombinatoricsScreen(controller: _comboCtrl),
       CalcMode.statistics => StatisticsScreen(controller: _statsCtrl),
     };
   }

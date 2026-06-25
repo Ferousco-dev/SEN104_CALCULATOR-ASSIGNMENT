@@ -94,11 +94,14 @@ class _ModeItem extends StatelessWidget {
               color: isActive ? AppPalette.accent : AppPalette.textSecondary,
             ),
             const SizedBox(width: AppMetrics.sp16),
-            Text(
-              mode.label,
-              style: AppTypography.modeLabel.copyWith(
-                color: isActive ? AppPalette.accent : AppPalette.textPrimary,
-                fontWeight: isActive ? FontWeight.w600 : FontWeight.w500,
+            Expanded(
+              child: Text(
+                mode.label,
+                overflow: TextOverflow.ellipsis,
+                style: AppTypography.modeLabel.copyWith(
+                  color: isActive ? AppPalette.accent : AppPalette.textPrimary,
+                  fontWeight: isActive ? FontWeight.w600 : FontWeight.w500,
+                ),
               ),
             ),
           ],

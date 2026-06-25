@@ -4,7 +4,6 @@ enum CalcMode {
   basic,
   scientific,
   matrix,
-  combinatorics,
   statistics,
 }
 
@@ -13,7 +12,6 @@ extension CalcModeInfo on CalcMode {
     CalcMode.basic => 'Basic',
     CalcMode.scientific => 'Scientific',
     CalcMode.matrix => 'Matrix',
-    CalcMode.combinatorics => 'Permutations & Combinations',
     CalcMode.statistics => 'Statistics',
   };
 
@@ -21,7 +19,6 @@ extension CalcModeInfo on CalcMode {
     CalcMode.basic => Icons.calculate_outlined,
     CalcMode.scientific => Icons.functions_outlined,
     CalcMode.matrix => Icons.grid_on_outlined,
-    CalcMode.combinatorics => Icons.shuffle_outlined,
     CalcMode.statistics => Icons.bar_chart_outlined,
   };
 }
